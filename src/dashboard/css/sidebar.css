@@ -1,0 +1,32 @@
+.sidebar-header {
+	border-bottom: 1px solid #549ae8;
+	padding: 20px 0;
+}
+.sidebar-header span {
+	font-size: 30px;
+	color: #fff;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.sidebar-header h3 {
+	font-size: 25px;
+	color: #fff;
+	margin-bottom: 0;
+}
+.dashboard-content {
+	padding: 15px 0;
+	border-bottom: 1px solid #549ae8;
+}
+.dashboard-content h5 {
+	font-size: 15px;
+	color: #f3f4f6;
+	margin-bottom: 0;
+}
+.dashboard-content span {
+	font-size: 20px;
+	color: #f3f4f6;
+	margin-bottom: 0;
+	margin-right: 3px;
+}
