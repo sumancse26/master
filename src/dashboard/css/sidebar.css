@@ -30,3 +30,24 @@
 	margin-bottom: 0;
 	margin-right: 3px;
 }
+.sidebar-accordion {
+	margin-top: 30px;
+}
+
+.sidebar-accordion .accordion-header-custom {
+	background-color: #4e73df;
+	color: #f3f4f6;
+}
+.sidebar-accordion .category-name {
+	margin-left: 15px !important;
+	background-color: #4e73df;
+	color: #f3f4f6;
+}
+
+.sidebar-accordion .accordion-item {
+	background-color: unset;
+}
+
+.sidebar-accordion .accordion-body {
+	padding: 10px;
+}
