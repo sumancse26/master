@@ -6,7 +6,7 @@
 		<div class="right-sidebar">
 			<Details />
 			<Content />
-			<div class="footer">footer</div>
+			<Footer />
 		</div>
 	</div>
 </template>
@@ -15,14 +15,15 @@
 	import Sidebar from './components/SidebarComp.vue';
 	import Details from './components/DetailsDashboard.vue';
 	import Content from './components/ContentComp.vue';
+	import Footer from './components/FooterComp.vue';
 	export default {
 		components: {
 			Sidebar,
 			Details,
 			Content,
+			Footer,
 		},
 	};
 </script>
 
 <style scoped src="./css/dashboard.css"></style>
-<!-- <style scoped src="../css/dashbboard.css"></style> -->

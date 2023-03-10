@@ -1,5 +1,5 @@
 <template>
-	<div class="header-info d-flex justify-content-end align-items-center">
+	<div id="header-info" class="header-info d-flex justify-content-end align-items-center">
 		<div class="search input-group">
 			<span class="material-symbols-outlined"> search </span>
 			<input
