@@ -33,31 +33,6 @@
 			/>
 		</div>
 	</div>
-
-	<!--hero section -->
-	<div class="parent-hero d-flex row">
-		<div class="hero-section col-md-6">
-			<img src="@/assets/images/post-1.jpg.webp" alt="" />
-			<div class="text">
-				<div class="title d-flex">
-					<p class="">Javascript</p>
-					<span>March 8, 2023</span>
-				</div>
-				<p class="meta-tag">Chrome Extension Protects Against JavaScript-Based CPU Side-Channel Attacks</p>
-			</div>
-		</div>
-
-		<div class="hero-section col-md-6">
-			<img src="@/assets/images/post-1.jpg.webp" alt="" />
-			<div class="text">
-				<div class="title d-flex">
-					<p class="">Javascript</p>
-					<span>March 8, 2023</span>
-				</div>
-				<p class="meta-tag">Chrome Extension Protects Against JavaScript-Based CPU Side-Channel Attacks</p>
-			</div>
-		</div>
-	</div>
 </template>
 
 <style scoped>
@@ -150,57 +125,5 @@
 		font-weight: 600;
 		top: 16px;
 		left: 20px;
-	}
-
-	.parent-hero {
-		padding: 0 200px;
-		width: 100%;
-	}
-	.hero-section {
-		/* width: 100%; */
-		padding: 0;
-	}
-	.hero-section img {
-		width: 5%;
-		position: relative;
-	}
-	.hero-section .text {
-		position: absolute;
-		z-index: 9;
-		left: 12%;
-		bottom: 30%;
-		color: #fff;
-	}
-
-	.hero-section .text .title p {
-		margin: 0;
-		padding: 0;
-		margin-right: 15px;
-		background: #f97316;
-		/* padding: 3px 13px; */
-		letter-spacing: 1px;
-		font-size: 18px;
-		font-family: 'Open Sans', sans-serif;
-		border-radius: 3px;
-	}
-	.hero-section .text .title span {
-		margin: 0;
-		padding: 0;
-		letter-spacing: 1px;
-		color: #eceef2;
-		/* color: #8310dd; */
-		font-size: 16px;
-		padding-top: 7px;
-		font-weight: 500;
-		font-family: 'Open Sans', sans-serif;
-	}
-	.hero-section .text .meta-tag {
-		margin: 0;
-		padding-top: 15px;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 700;
-		font-size: 16px;
-		letter-spacing: 2px;
-		width: 65%;
 	}
 </style>
