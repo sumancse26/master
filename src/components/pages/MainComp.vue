@@ -120,7 +120,74 @@
 					</div>
 				</div>
 			</div>
-			<div class="right-sidebar col-md-4">right content</div>
+
+			<!-- right sidebar section -->
+			<div class="right-sidebar col-md-4">
+				<div class="most-read-section">
+					<div class="most-read">
+						<p class="m-0">Most Read</p>
+						<div class="border"></div>
+					</div>
+
+					<div class="right-aside d-flex m-0">
+						<img src="@/assets/images/post-2.jpg.webp" alt="" />
+						<p>Tell-A-Tool: Guide To Web Design And Development Tools</p>
+					</div>
+					<div class="right-aside d-flex m-0">
+						<img src="@/assets/images/post-5.jpg.webp" alt="" />
+						<p>Tell-A-Tool: Guide To Web Design And Development Tools</p>
+					</div>
+					<div class="right-aside d-flex m-0">
+						<img src="@/assets/images/post-1.jpg.webp" alt="" />
+						<p>Tell-A-Tool: Guide To Web Design And Development Tools</p>
+					</div>
+					<div class="right-aside d-flex m-0">
+						<img src="@/assets/images/post-4.jpg.webp" alt="" />
+						<p>Tell-A-Tool: Guide To Web Design And Development Tools</p>
+					</div>
+					<div class="right-aside d-flex m-0">
+						<img src="@/assets/images/post-3.jpg.webp" alt="" />
+						<p>Tell-A-Tool: Guide To Web Design And Development Tools</p>
+					</div>
+				</div>
+
+				<div class="featured-post row">
+					<div class="row featured-post-header">
+						<p>Featured post</p>
+						<div class="border"></div>
+					</div>
+					<div class="post-body col-md-12">
+						<img src="@/assets/images/post-5.jpg.webp" alt="" />
+						<div class="post-content">
+							<div class="header-content">
+								<p class="post-title">Javascript</p>
+								<span class="post-date">March 10, 2023</span>
+							</div>
+							<p class="post-footer">Ask HN: Does Anybody Still Use JQuery?</p>
+						</div>
+					</div>
+					<div class="post-body col-md-12">
+						<img src="@/assets/images/post-4.jpg.webp" alt="" />
+						<div class="post-content">
+							<div class="header-content">
+								<p class="post-title">Html</p>
+								<span class="post-date">March 10, 2023</span>
+							</div>
+							<p class="post-footer">Ask HN: Does Anybody Still Use JQuery?</p>
+						</div>
+					</div>
+					<div class="post-body col-md-12">
+						<img src="@/assets/images/post-3.jpg.webp" alt="" />
+						<div class="post-content">
+							<div class="header-content">
+								<p class="post-title">Css</p>
+								<span class="post-date">March 10, 2023</span>
+							</div>
+							<p class="post-footer">Ask HN: Does Anybody Still Use JQuery?</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -128,6 +195,9 @@
 <style scoped>
 	* {
 		--bs-gutter-x: unset;
+	}
+	.main-comp {
+		margin-bottom: 40px;
 	}
 	.parent-hero {
 		margin-top: 30px;
@@ -362,5 +432,117 @@
 	}
 	.content .left-content .lower-left p:hover {
 		text-decoration: underline;
+	}
+
+	/* .right-sidebar section */
+
+	.right-sidebar .most-read-section {
+		margin-bottom: 30px;
+	}
+	.right-sidebar .most-read {
+		font-size: 18px;
+		font-family: 'Open Sans', sans-serif;
+		letter-spacing: 1px;
+		font-weight: 500;
+		text-transform: capitalize;
+		color: #9ca3af;
+	}
+	.right-sidebar .most-read .border {
+		width: 55px;
+		height: 5px;
+		margin-left: 15px;
+		background-color: #312e81;
+	}
+	.right-sidebar .right-aside:hover {
+		cursor: pointer;
+	}
+	.right-sidebar .right-aside {
+		margin-top: 20px !important;
+	}
+	.right-sidebar .right-aside img {
+		width: 90px;
+	}
+	.right-sidebar .right-aside p:hover {
+		text-decoration: underline;
+	}
+	.right-sidebar .right-aside p {
+		margin: 0;
+		padding-left: 20px;
+		font-size: 16px;
+		font-family: 'Open Sans', sans-serif;
+		letter-spacing: 1px;
+		font-weight: 700;
+		text-transform: capitalize;
+	}
+
+	.featured-post-header {
+		margin-top: 20px;
+	}
+	.featured-post-header p {
+		font-size: 18px;
+		font-weight: 600;
+		font-family: 'Open Sans', sans-serif;
+		letter-spacing: 1px;
+		text-transform: capitalize;
+		color: #9ca3af;
+		margin-bottom: 0;
+	}
+	.featured-post-header .border {
+		width: 90px;
+		height: 5px;
+		background-color: #312e81 !important;
+		margin-left: 20px;
+		margin-bottom: 30px;
+	}
+	.featured-post .post-body {
+		position: relative;
+	}
+	.featured-post .post-body .post-content {
+		position: absolute;
+		left: 5%;
+		bottom: 5%;
+	}
+	.featured-post .post-body .header-content {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.featured-post .post-body .header-content .post-title {
+		margin: 0;
+		padding: 3px 10px;
+		background-color: #f97316;
+		margin-right: 15px;
+		text-transform: capitalize;
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: 1px;
+		border-radius: 5px;
+		color: #fff;
+	}
+	.featured-post .post-body .header-content .post-date {
+		margin: 0;
+		text-transform: capitalize;
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: 1px;
+		border-radius: 5px;
+		color: #92400e;
+	}
+	.featured-post .post-body img {
+		width: 100%;
+	}
+
+	.featured-post .post-body .post-footer {
+		margin: 0;
+		color: #fff;
+		font-family: cursive;
+		font-size: 18px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-transform: capitalize;
+	}
+	.featured-post .post-body .post-footer:hover {
+		text-decoration: underline;
+		cursor: pointer;
 	}
 </style>
