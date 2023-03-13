@@ -5,7 +5,8 @@
 				<h1>Techiegonic</h1>
 			</div>
 			<div class="category-list col-md-7">
-				<ul class="d-flex">
+				<span class="material-symbols-outlined menubar" @click="toggleMenubarHandler"> menu </span>
+				<ul class="d-flex" :class="{ list: isMenubarToggle, 'show-list': !isMenubarToggle }">
 					<li><a>News</a></li>
 					<li><a>Fashion</a></li>
 					<li><a>Technology</a></li>
@@ -35,6 +36,20 @@
 	</div>
 </template>
 
+<script>
+	export default {
+		data() {
+			return {
+				isMenubarToggle: false,
+			};
+		},
+		methods: {
+			toggleMenubarHandler() {
+				this.isMenubarToggle = !this.isMenubarToggle;
+			},
+		},
+	};
+</script>
 <style scoped>
 	#header-layout {
 		border-bottom: 2px solid #e5e7eb;
@@ -125,5 +140,44 @@
 		font-weight: 600;
 		top: 16px;
 		left: 20px;
+	}
+
+	.menubar {
+		display: none;
+	}
+
+	@media screen and (min-width: 991px) and (max-width: 1365px) {
+		.logo {
+			width: 100% !important;
+		}
+
+		.header .category-list .show-list {
+			display: none;
+		}
+		.header .category-list .list {
+			position: absolute !important;
+			left: 21% !important;
+			top: 11% !important;
+			display: flex !important;
+			flex-direction: column !important;
+		}
+		.header .category-list .list li {
+			text-align: start !important;
+		}
+		.header .category-list .list li a {
+			font-size: 20px !important;
+			font-weight: 600;
+		}
+		.header .menubar {
+			display: inline-flex !important;
+			font-size: 50px;
+			font-weight: 600;
+			margin: 0;
+			padding: 0;
+		}
+		.header .list {
+			display: inline-flex !important;
+			position: absolute;
+		}
 	}
 </style>

@@ -545,4 +545,10 @@
 		text-decoration: underline;
 		cursor: pointer;
 	}
+
+	@media screen and (min-width: 1366px) {
+		.featured-post .post-body {
+			margin-top: 15px !important;
+		}
+	}
 </style>

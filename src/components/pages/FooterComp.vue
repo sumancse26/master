@@ -38,10 +38,7 @@
 	}
 	.footer {
 		display: flex;
-		/* justify-content: center; */
 		align-items: center;
-		margin-top: 40px;
-		padding: 20px 10px;
 	}
 	.footer .name .blog-name {
 		font-size: 30px;
@@ -117,5 +114,13 @@
 	}
 	.footer .newsletter .social-section i {
 		padding: 15px;
+	}
+
+	/* responsive style section */
+
+	@media screen and (min-width: 1366px) {
+		.footer {
+			height: 10% !important;
+		}
 	}
 </style>
