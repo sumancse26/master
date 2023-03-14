@@ -2,8 +2,8 @@
 	<div id="header-layout">
 		<div class="header">
 			<div class="header-content d-flex align-items-center justify-content-between row">
-				<span class="material-symbols-outlined menubar" @click="toggleMenubarHandler"> menu </span>
 				<div class="logo col-md-7 d-flex justify-content-end">
+					<span class="material-symbols-outlined menubar" @click="toggleMenubarHandler"> menu </span>
 					<h1 class="p-0 m-0">Techiegonic</h1>
 				</div>
 				<div class="login-signup col-md-5 d-flex justify-content-end">
@@ -15,7 +15,7 @@
 
 		<div class="row navbar d-flex">
 			<div class="category-list col-md-6">
-				<ul class="d-flex" :class="{ list: isMenubarToggle, 'show-list': !isMenubarToggle }">
+				<ul class="d-flex" :class="{ 'hide-list': !isMenubarToggle, 'show-list': isMenubarToggle }">
 					<li><a>News</a></li>
 					<li><a>Fashion</a></li>
 					<li><a>Technology</a></li>
@@ -183,36 +183,52 @@
 
 	@media screen and (min-width: 991px) and (max-width: 1365px) {
 		.logo {
-			width: 100% !important;
+			width: 50% !important;
+			justify-content: flex-start !important;
 		}
 
-		.header .category-list .show-list {
-			display: none;
+		.category-list .hide-list {
+			display: none !important;
 		}
-		.header .category-list .list {
-			position: absolute !important;
-			left: 21% !important;
-			top: 11% !important;
+		.category-list .show-list {
 			display: flex !important;
 			flex-direction: column !important;
+			justify-content: flex-start !important;
+			align-items: flex-start !important;
+			position: absolute !important;
+			top: 0;
+			z-index: 999;
+			height: auto !important;
+			padding: 10px 0 10px 10px !important;
+			background: #4c1d95 !important;
 		}
-		.header .category-list .list li {
+		.category-list .show-list li {
 			text-align: start !important;
 		}
-		.header .category-list .list li a {
-			font-size: 18px !important;
-			font-weight: 600;
+		.category-list .show-list li a {
+			font-size: 16px !important;
+			font-weight: 600 !important;
+			font-family: 'Open Sans', sans-serif !important;
+			color: #fff !important;
+		}
+
+		.category-list .show-list li a:hover {
+			color: #f97316 !important;
+			border-bottom: unset !important;
 		}
 		.header .menubar {
 			display: inline-flex !important;
-			font-size: 50px;
+			font-size: 45px;
 			font-weight: 600;
 			margin: 0;
-			padding: 0;
+			margin-right: 8px;
+			color: #665454;
 		}
-		.header .list {
-			display: inline-flex !important;
-			position: absolute;
+		.navbar .content-search {
+			justify-content: center;
+			align-items: center;
+			width: 50% !important;
+			margin: 0;
 		}
 	}
 </style>
