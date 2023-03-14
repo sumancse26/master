@@ -16,7 +16,7 @@
 			<div class="hero-section col-md-6">
 				<img src="@/assets/images/post-2.jpg.webp" alt="" />
 				<div class="text">
-					<div class="title d-flex">
+					<div class="title d-flex align-items-center">
 						<p class="">Php</p>
 						<span>March 8, 2023</span>
 					</div>
@@ -32,7 +32,7 @@
 				<div class="border"></div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 p-0 m-0">
+				<div class="col-md-4 p-0 m-0 recent-content">
 					<img src="@/assets/images/post-3.jpg.webp" alt="" />
 					<div class="post-info">
 						<div class="post-header d-flex justify-content-start align-items-center mt-3">
@@ -49,7 +49,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-4 p-0 m-0">
+				<div class="col-md-4 p-0 m-0 recent-content">
 					<img src="@/assets/images/post-4.jpg.webp" alt="" />
 					<div class="post-info">
 						<div class="post-header d-flex justify-content-start align-items-center mt-3">
@@ -66,7 +66,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-4 p-0 m-0">
+				<div class="col-md-4 p-0 m-0 recent-content">
 					<img src="@/assets/images/post-5.jpg.webp" alt="" />
 					<div class="post-info">
 						<div class="post-header d-flex justify-content-start align-items-center mt-3">
@@ -204,11 +204,16 @@
 	}
 	.hero-section {
 		padding: 0;
+		padding-right: 15px;
 		position: relative;
 		--bs-gutter-x: unset;
 	}
+	.hero-section:last-child {
+		padding-right: 0 !important;
+		padding-left: 15px !important;
+	}
 	.hero-section img {
-		width: 95%;
+		width: 100%;
 	}
 	.hero-section .text {
 		position: absolute;
@@ -272,8 +277,17 @@
 		margin: 0 !important;
 		margin-bottom: 30px !important;
 	}
+	.recent-post .recent-content {
+		padding: 0 10px !important;
+	}
+	.recent-post .recent-content:first-child {
+		padding-left: 0 !important;
+	}
+	.recent-post .recent-content:last-child {
+		padding-right: 0 !important;
+	}
 	.recent-post img {
-		width: 95%;
+		width: 100%;
 		height: 65%;
 		object-fit: cover;
 	}
@@ -546,9 +560,116 @@
 		cursor: pointer;
 	}
 
+	/* for responsive area */
 	@media screen and (min-width: 1366px) {
 		.featured-post .post-body {
 			margin-top: 15px !important;
+		}
+	}
+	@media screen and (min-width: 991px) and (max-width: 1365px) {
+		.hero-section .text .meta-tag {
+			padding-top: 10px !important;
+			font-weight: 500 !important;
+			font-size: 14px !important;
+			letter-spacing: 1px !important;
+		}
+		.hero-section .text .title {
+			align-items: center !important;
+		}
+		.hero-section .text .title p {
+			padding: 1px 13px;
+			font-size: 16px;
+		}
+
+		.hero-section .text .title span {
+			font-size: 16px;
+			font-weight: 500;
+		}
+
+		.recent-post img {
+			width: 100%;
+			height: 35%;
+		}
+		.recent-post .post-header .post-category {
+			padding: 1px 6px;
+			display: flex;
+			margin-right: 9px;
+		}
+		.recent-post .post-header .post-category span {
+			font-size: 14px;
+			line-height: 22px;
+		}
+		.recent-post .post-header .post-date {
+			font-size: 10px;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+
+		.recent-post .post-info .post-title {
+			line-height: 20px;
+		}
+
+		.recent-post .post-info .post-title a {
+			color: rgb(72, 69, 69);
+			font-size: 14px;
+			font-weight: 400;
+		}
+		.content .left-content .upper-left .text p span {
+			font-size: 16px;
+		}
+		.content .left-content .upper-left .text .meta-tag {
+			font-size: 14px;
+		}
+		.content .left-content .upper-left .text .date {
+			font-size: 14px;
+		}
+
+		.content .left-content .lower-left p {
+			margin-top: 0;
+		}
+		.content .left-content .lower-left .post-tag p {
+			font-size: 14px;
+			padding: 0px 3px;
+			letter-spacing: 1px;
+			border-radius: 3px;
+			margin-right: 4px;
+		}
+		.content .left-content .lower-left .post-tag span {
+			font-size: 14px;
+			font-weight: 500;
+			padding: 1px 3px;
+		}
+		.content .left-content .lower-left .post-tag {
+			margin-bottom: 15px !important;
+		}
+		.content .left-content .lower-left p {
+			font-size: 14px;
+			font-weight: 500;
+		}
+		.right-sidebar .right-aside img {
+			height: 75px;
+		}
+		.right-sidebar .right-aside p {
+			padding-left: 16px;
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		.featured-post .post-body {
+			margin-bottom: 25px;
+		}
+		.featured-post .post-body .header-content .post-title {
+			padding: 0px 5px;
+			margin-right: 10px;
+			font-size: 12px;
+			border-radius: 3px;
+		}
+		.featured-post .post-body .header-content .post-date {
+			font-size: 12px;
+			font-weight: 400;
+		}
+		.featured-post .post-body .post-footer {
+			font-size: 12px;
 		}
 	}
 </style>
