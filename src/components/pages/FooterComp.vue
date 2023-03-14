@@ -35,33 +35,50 @@
 <style scoped>
 	* {
 		--bs-gutter-x: unset;
+		--bs-gutter-y: unset;
 	}
 	.footer {
+		height: auto;
+		padding: 30px 200px;
 		display: flex;
 		align-items: center;
+		background-color: #fb923c;
+		height: auto;
+	}
+	.footer .name {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	.footer .name .blog-name {
 		font-size: 30px;
 		font-family: 'Shantell Sans', cursive;
 		color: #312e81;
 		font-weight: 600;
-		margin: 0;
+		margin-bottom: 20;
 	}
 	.footer .name .privacy,
 	.footer .name .copyright {
 		font-size: 16px;
 		letter-spacing: 2px;
 		font-family: 'Shantell Sans', cursive;
-		color: #88888a;
+		color: #fff;
 		font-weight: 500;
 		margin: 0;
-		margin-top: 20px;
 		margin-bottom: 10px;
 	}
 	.footer .name .copyright {
 		font-size: 12px;
 	}
-
+	.footer .categories,
+	.footer .about-us,
+	.footer .newsletter {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
 	.footer .categories .title,
 	.footer .about-us .title {
 		font-size: 18px;
@@ -71,18 +88,14 @@
 		font-family: 'Open Sans', sans-serif;
 		margin-bottom: 20px !important;
 	}
-	.footer .categories .about,
-	.footer .about-us .about {
-		margin-top: 20px;
-	}
 	.footer .categories p,
 	.footer .about-us p {
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: 500;
 		text-transform: capitalize;
 		letter-spacing: 1px;
 		font-family: 'Open Sans', sans-serif;
-		color: #88888a;
+		color: #fff;
 		margin: 0;
 	}
 	.footer .categories p:hover,
@@ -91,20 +104,32 @@
 		color: #000;
 	}
 	.footer .newsletter {
-		margin-top: 15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		/* margin-top: 15px; */
 	}
 	.footer .newsletter p {
 		margin: 0;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 600;
 		letter-spacing: 1px;
-		font-family: open-sans;
+		font-family: 'Open Sans', sans-serif;
 		text-transform: capitalize;
+		margin-block: 20px;
 	}
 	.footer .newsletter input {
 		height: 38px;
 		padding-left: 20px;
-		margin-top: 20px;
+		border-radius: 2px;
+		border: unset !important;
+		box-shadow: unset;
+	}
+	.footer .newsletter input:focus-visible {
+		border: none !important;
+		box-shadow: unset !important
+        ;
 	}
 	.footer .newsletter .social-section i:first-child {
 		padding-left: 0;
@@ -120,7 +145,7 @@
 
 	@media screen and (min-width: 1366px) {
 		.footer {
-			height: 10% !important;
+			/* height: 10% !important; */
 		}
 	}
 </style>

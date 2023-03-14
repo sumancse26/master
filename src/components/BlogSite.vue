@@ -3,8 +3,8 @@
 		<Header />
 		<div class="content">
 			<MainContent />
-			<Footer />
 		</div>
+		<Footer />
 	</div>
 </template>
 
@@ -24,7 +24,7 @@
 <style scoped>
 	.layout {
 		display: grid;
-		grid-template-rows: 80px auto auto;
+		grid-template-rows: auto auto auto;
 	}
 	.layout .content {
 		padding: 0 200px;
